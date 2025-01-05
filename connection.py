@@ -9,6 +9,7 @@ def create_new_connection(ip: str, user: str, password: str, database: str):
                                   port="5432",
                                   database=database)
         connection.autocommit = True
+        
         print("Соединение открыто")
     except (Exception, Error) as error:
         print("Ошибка при работе с PostgreSQL", error)
